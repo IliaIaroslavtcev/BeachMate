@@ -174,9 +174,9 @@ public class BeachNameHandler implements CommandHandler {
                 .append(formatDataSources(weatherInfo, language));
         
         if (language.equals("es")) {
-            beachInfoBuilder.append("💡 *¡Prueba escribir otro nombre de playa o usa /help para ver ejemplos!*");
+            beachInfoBuilder.append("💡 *¡Prueba escribir otro nombre de playa como 'Sagunto Platja de Canet' o usa /help para ver ejemplos!*");
         } else {
-            beachInfoBuilder.append("💡 *Try typing another beach name or use /help for examples!*");
+            beachInfoBuilder.append("💡 *Try typing another beach name like 'Sagunto Platja de Canet' or use /help for examples!*");
         }
 
         return beachInfoBuilder.toString();
@@ -192,7 +192,7 @@ public class BeachNameHandler implements CommandHandler {
                     "• The beach might not be in our database yet\n\n" +
                     "💡 **Try these suggestions:**\n" +
                     "• Check the spelling of the beach name\n" +
-                    "• Include the city or region (e.g., \"Benidorm\")\n" +
+                    "• Include the city or region (e.g., \"Sagunto Platja de Canet\")\n" +
                     "• Use Spanish names (e.g., \"Playa de la Concha\")\n" +
                     "• Type /help for popular beach examples\n\n" +
                     "🔄 *We're constantly expanding our database of Spanish beaches!*";
@@ -205,7 +205,7 @@ public class BeachNameHandler implements CommandHandler {
                     "• La playa puede no estar en nuestra base de datos aún\n\n" +
                     "💡 **Prueba estas sugerencias:**\n" +
                     "• Verifica la ortografía del nombre de la playa\n" +
-                    "• Incluye la ciudad o región (ej., \"Benidorm\")\n" +
+                    "• Incluye la ciudad o región (ej., \"Sagunto Platja de Canet\")\n" +
                     "• Usa nombres en español (ej., \"Playa de la Concha\")\n" +
                     "• Escribe /help para ejemplos de playas populares\n\n" +
                     "🔄 *¡Estamos expandiendo constantemente nuestra base de datos de playas españolas!*";
@@ -218,7 +218,7 @@ public class BeachNameHandler implements CommandHandler {
                     "• The beach might not be in our database yet\n\n" +
                     "💡 **Try these suggestions:**\n" +
                     "• Check the spelling of the beach name\n" +
-                    "• Include the city or region (e.g., \"Benidorm\")\n" +
+                    "• Include the city or region (e.g., \"Sagunto Platja de Canet\")\n" +
                     "• Use Spanish names (e.g., \"Playa de la Concha\")\n" +
                     "• Type /help for popular beach examples\n\n" +
                     "🔄 *We're constantly expanding our database of Spanish beaches!*";
@@ -616,7 +616,7 @@ public class BeachNameHandler implements CommandHandler {
                     "• Only " + suggestion.getEditDistance() + " character(s) different from your input\n" +
                     "• Many travelers search for this location\n\n" +
                     "🏖️ **Other popular destinations to try:**\n" +
-                    "• `benidorm` - Famous Costa Blanca resort\n" +
+                    "• `Sagunto Platja de Canet` - Beautiful Valencia beach\n" +
                     "• `valencia` - Beautiful Mediterranean beaches\n" +
                     "• `alicante` - Historic coastal city\n" +
                     "• `marbella` - Glamorous Costa del Sol\n" +
@@ -632,7 +632,7 @@ public class BeachNameHandler implements CommandHandler {
                     "• Solo " + suggestion.getEditDistance() + " caracter(es) diferentes de tu entrada\n" +
                     "• Muchos viajeros buscan esta ubicación\n\n" +
                     "🏖️ **Otros destinos populares para probar:**\n" +
-                    "• `benidorm` - Famoso resort de Costa Blanca\n" +
+                    "• `Sagunto Platja de Canet` - Hermosa playa de Valencia\n" +
                     "• `valencia` - Hermosas playas mediterráneas\n" +
                     "• `alicante` - Ciudad costera histórica\n" +
                     "• `marbella` - Glamurosa Costa del Sol\n" +
@@ -648,7 +648,7 @@ public class BeachNameHandler implements CommandHandler {
                     "• Only " + suggestion.getEditDistance() + " character(s) different from your input\n" +
                     "• Many travelers search for this location\n\n" +
                     "🏖️ **Other popular destinations to try:**\n" +
-                    "• `benidorm` - Famous Costa Blanca resort\n" +
+                    "• `Sagunto Platja de Canet` - Beautiful Valencia beach\n" +
                     "• `valencia` - Beautiful Mediterranean beaches\n" +
                     "• `alicante` - Historic coastal city\n" +
                     "• `marbella` - Glamorous Costa del Sol\n" +

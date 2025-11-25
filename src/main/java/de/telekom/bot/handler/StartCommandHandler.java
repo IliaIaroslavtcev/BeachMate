@@ -52,7 +52,7 @@ public class StartCommandHandler implements CommandHandler {
                        "   • 🌤️ Weather conditions & comfort level\n" +
                        "   • 🪼 Jellyfish safety alerts\n" +
                        "   • 🏖️ Beach surface information\n\n" +
-                       "💬 *Example:* Just type \"Benidorm\" or \"Playa de la Concha\"\n\n" +
+                       "💬 *Example:* Just type \"Sagunto Platja de Canet\" or \"Playa de la Concha\"\n\n" +
                        "📍 *Coverage areas:*\n" +
                        "   • Mediterranean coast (Costa Brava, Costa del Sol, Costa Blanca)\n" +
                        "   • Atlantic coast (Basque beaches, Galicia)\n" +
@@ -71,7 +71,7 @@ public class StartCommandHandler implements CommandHandler {
                        "   • 🌤️ Condiciones meteorológicas y nivel de confort\n" +
                        "   • 🪼 Alertas de seguridad sobre medusas\n" +
                        "   • 🏖️ Información de la superficie de la playa\n\n" +
-                       "💬 *Ejemplo:* Simplemente escribe \"Benidorm\" o \"Playa de la Concha\"\n\n" +
+                       "💬 *Ejemplo:* Simplemente escribe \"Sagunto Platja de Canet\" o \"Playa de la Concha\"\n\n" +
                        "📍 *Áreas de cobertura:*\n" +
                        "   • Costa mediterránea (Costa Brava, Costa del Sol, Costa Blanca)\n" +
                        "   • Costa atlántica (playas vascas, Galicia)\n" +
@@ -91,7 +91,7 @@ public class StartCommandHandler implements CommandHandler {
                        "   • 🌤️ Weather conditions & comfort level\n" +
                        "   • 🪼 Jellyfish safety alerts\n" +
                        "   • 🏖️ Beach surface information\n\n" +
-                       "💬 *Example:* Just type \"Benidorm\" or \"Playa de la Concha\"\n\n" +
+                       "💬 *Example:* Just type \"Sagunto Platja de Canet\" or \"Playa de la Concha\"\n\n" +
                        "📍 *Coverage areas:*\n" +
                        "   • Mediterranean coast (Costa Brava, Costa del Sol, Costa Blanca)\n" +
                        "   • Atlantic coast (Basque beaches, Galicia)\n" +

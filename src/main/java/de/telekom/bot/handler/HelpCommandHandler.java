@@ -61,7 +61,7 @@ public class HelpCommandHandler implements CommandHandler {
                        "• Cala Comte • Es Trenc • Cala Turqueta • Playa de Palma\n\n" +
                        "**🌋 Basque Coast:**\n" +
                        "• La Concha • Zurriola • Sopelana\n\n" +
-                       "💬 *Example:* Type \"Benidorm\" to get full information!";
+                       "💬 *Example:* Type \"Sagunto Platja de Canet\" to get full information!";
                        
             case BotConst.LANG_SPANISH:
                 return "🌊 *Ayuda del Bot de Playas Españolas* 🏖️\n\n" +
@@ -82,7 +82,7 @@ public class HelpCommandHandler implements CommandHandler {
                        "• Cala Comte • Es Trenc • Cala Turqueta • Playa de Palma\n\n" +
                        "**🌋 Costa Vasca:**\n" +
                        "• La Concha • Zurriola • Sopelana\n\n" +
-                       "💬 *Ejemplo:* ¡Escribe \"Benidorm\" para obtener información completa!";
+                       "💬 *Ejemplo:* ¡Escribe \"Sagunto Platja de Canet\" para obtener información completa!";
                        
             default:
                 // Default to English if language is not recognized
@@ -104,7 +104,7 @@ public class HelpCommandHandler implements CommandHandler {
                        "• Cala Comte • Es Trenc • Cala Turqueta • Playa de Palma\n\n" +
                        "**🌋 Basque Coast:**\n" +
                        "• La Concha • Zurriola • Sopelana\n\n" +
-                       "💬 *Example:* Type \"Benidorm\" to get full information!";
+                       "💬 *Example:* Type \"Sagunto Platja de Canet\" to get full information!";
         }
     }
 }
