@@ -1,56 +1,55 @@
-# 🌊 Spanish Beach & Jellyfish Bot 🪼
+# 🏖️ Spanish Beach Bot
 
-**Intelligent multilingual Telegram bot for Spanish beach information** - Your reliable assistant for safe beach vacation planning!
+**Умный многоязычный Telegram-бот для информации о пляжах Испании**
 
-[![🇪🇸 Spanish Beaches](https://img.shields.io/badge/Coverage-Spanish%20Beaches-red?style=flat-square)](https://github.com)
-[![🌍 Multilingual](https://img.shields.io/badge/Languages-2-blue?style=flat-square)](https://github.com)
-[![⚡ Fast Response](https://img.shields.io/badge/Response%20Time-3--8s-green?style=flat-square)](https://github.com)
-[![🪼 Jellyfish Monitor](https://img.shields.io/badge/Marine%20Safety-Real--time-orange?style=flat-square)](https://github.com)
+[![Java 21](https://img.shields.io/badge/Java-21-orange?style=flat-square)](https://openjdk.org/)
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5.5-brightgreen?style=flat-square)](https://spring.io/projects/spring-boot)
+[![Telegram Bot API](https://img.shields.io/badge/Telegram%20Bot%20API-6.9.7-blue?style=flat-square)](https://core.telegram.org/bots/api)
+[![Languages](https://img.shields.io/badge/Языки-Русский%20%7C%20English-yellow?style=flat-square)](https://github.com)
 
 ---
 
-## 🎯 What the Bot Provides
+## 👋 О проекте
 
-### 📝 **Simple Usage**
-Just type any Spanish beach name! Examples: `Benidorm`, `Playa de la Concha`, `Marbella`, `Costa Brava`
+Это современный Telegram-бот, разработанный на **Java 21** и **Spring Boot 3.5.5**. Бот помогает получить актуальную информацию о пляжах Испании, включая данные о погоде, медузах и типе покрытия.
 
-### 🌍 **Multilingual Support** 
-- **🇬🇧 English** (default) - Perfect for international tourists
-- **🇪🇸 Spanish** - Ideal for local Spanish speakers
+## ✨ Основные возможности
 
-### 🚀 **Comprehensive Beach Intelligence**
+### 🌍 **Многоязычность**
+- 🇷🇺 **Русский** - полная локализация
+- 🇬🇧 **English** - для международных туристов
+- Смена языка через `/language` или `/lang`
+- Сохранение настроек языка для каждого пользователя
 
-#### **🗺️ Location Services**
-- ✅ Precise GPS coordinates via Nominatim OSM
-- ✅ Full address and location confirmation
-- ✅ Beach type verification (confirmed vs coastal location)
-- ✅ Smart search with typo correction
+### 📍 **Поиск пляжей**
+- 🗺️ Точные GPS-координаты через Nominatim OSM
+- 📍 Полный адрес и подтверждение местоположения
+- ✍️ Интеллектуальная коррекция опечаток в названиях
+- 🇪🇸 Специализация на пляжах Испании
 
-#### **🌡️ Weather Intelligence**
-- ✅ Current air temperature from Open-Meteo API
-- ✅ Water temperature with multi-API fallback system
-- ✅ Regional weather patterns for Mediterranean/Atlantic coasts
-- ✅ Comfort level assessment with emoji indicators
+### 🌡️ **Погодные данные**
+- ☀️ Текущая температура воздуха (Open-Meteo API)
+- 🌊 Температура воды с системой резервных API
+- 🏝️ Региональные паттерны для Средиземного моря/Атлантики
+- 📊 Оценка уровня комфорта с emoji-индикаторами
 
-#### **🪼 Jellyfish Safety Monitoring**
-- ✅ Real-time data from 3 marine biology APIs (iNaturalist, GBIF, OBIS)
-- ✅ 5-tier risk assessment (Very Low to Very High)  
-- ✅ Species identification with danger level classification
-- ✅ Safety recommendations based on current conditions
-- ✅ Recent activity reports with distance and timing
+### 🪼 **Мониторинг медуз**
+- 🔍 Данные в реальном времени из 3 биологических API (iNaturalist, GBIF, OBIS)
+- ⚠️ 5-уровневая оценка риска (от Очень Низкого до Очень Высокого)
+- 🦠 Идентификация видов с классификацией опасности
+- 🚨 Рекомендации по безопасности на основе текущих условий
 
-#### **🏖️ Beach Surface Analysis**
-- ✅ Surface type detection (Sandy, Rocky, Pebble, Mixed)
-- ✅ Multi-source data (curated database + OpenStreetMap)
-- ✅ Regional intelligence for Spanish coastal areas
-- ✅ Visual indicators with appropriate emojis
+### 🏖️ **Анализ покрытия пляжа**
+- 🏝️ Определение типа покрытия (песок, камни, галька, смешанное)
+- 📊 Данные из нескольких источников (база данных + OpenStreetMap)
+- 🇪🇸 Региональная информация по испанским побережьям
 
-#### **⚡ Performance Features**
-- ✅ Parallel processing - all APIs called simultaneously
-- ✅ Smart caching - 5-minute cache for repeated requests  
-- ✅ Progress notifications - users see search status
-- ✅ Graceful degradation - partial data if some APIs fail
-- ✅ 80% faster response times (3-8s vs 20-45s)
+### ⚡ **Производительность**
+- 🚀 Параллельная обработка - все API вызываются одновременно
+- 💾 Умное кэширование - 5-минутный кэш для повторных запросов
+- ⏱️ Уведомления о прогрессе поиска
+- 🛡️ Плавная деградация - частичные данные при сбоях API
+- 📈 Быстрый ответ (3-8 секунд)
 
 ---
 
@@ -140,227 +139,237 @@ Over 20+ beaches including:
 
 ---
 
-## 🛠️ Quick Setup
+## 🚀 Быстрый старт
 
-### **1. Create Telegram Bot**
-1. Contact [@BotFather](https://t.me/botfather) in Telegram
-2. Send `/newbot` command
-3. Choose bot name and username (must end with `bot`)
-4. Get your bot token
+### **1. Требования**
+- **Java 21** (проверьте: `java -version`)
+- **Gradle** (включен в проект: `./gradlew`)
+- Telegram Bot Token (получите от [@BotFather](https://t.me/botfather))
 
-### **2. Configure Application**
+### **2. Создание Telegram-бота**
+1. Найдите [@BotFather](https://t.me/botfather) в Telegram
+2. Отправьте команду `/newbot`
+3. Выберите имя и username бота (должен заканчиваться на `bot`)
+4. Сохраните полученный токен
 
-**IMPORTANT:** Never commit real tokens/API keys to Git!
+### **3. Настройка конфигурации**
 
-1. Copy the example configuration:
+**ВАЖНО:** Никогда не коммитьте реальные токены/API ключи в Git!
+
+1. Скопируйте пример конфигурации:
 ```bash
 cp src/main/resources/application.yml.example src/main/resources/application.yml
 ```
 
-2. Edit `src/main/resources/application.yml` with your real credentials:
+2. Редактируйте `src/main/resources/application.yml` - добавьте свой токен:
 ```yaml
-# Telegram Bot Configuration
 telegram:
   bot:
-    token: "YOUR_REAL_BOT_TOKEN_FROM_BOTFATHER"  # Get from @BotFather
-    username: "YourBotUsername"
-
-# Nominatim (already configured, no API key needed)
-nominatim:
-  api:
-    user-agent: "SpanishBeachBot/1.0 (+https://github.com/IliaIaroslavtcev/BeachMate)"
-    enabled: true
-
-# All other APIs are pre-configured and enabled
+    token: "YOUR_TELEGRAM_BOT_TOKEN_HERE"  # Ваш токен от @BotFather
+    username: "YourBotUsername"             # Имя вашего бота
 ```
 
-**Note:** The `application.yml` file is in `.gitignore` to protect your secrets!
+**Примечание:** Файл `application.yml` защищён через `.gitignore`!
 
-### **3. Run Application**
+### **4. Запуск приложения**
+
+**Через Gradle:**
 ```bash
 ./gradlew bootRun
 ```
 
-### **4. Test Bot**
-1. Find your bot in Telegram by username
-2. Send `/start` command
-3. Choose your language with `/language`
-4. Type any Spanish beach name: `Benidorm`
-
----
-
-## 💻 Technical Architecture
-
-### **🏗️ Clean Architecture**
-```
-src/main/java/de/telekom/bot/
-├── service/
-│   ├── UserLanguageService.java    - Multi-language support
-│   ├── CommandDispatcher.java      - Strategy pattern for commands  
-│   ├── GeocodeService.java         - Beach location finding (Nominatim OSM)
-│   ├── WeatherService.java         - Temperature data (Open-Meteo)
-│   ├── JellyfishService.java       - Marine safety (3 biology APIs)
-│   └── BeachCharacteristicsService.java - Surface analysis
-├── handler/
-│   ├── CommandHandler.java         - Base command interface
-│   ├── StartCommandHandler.java    - Localized welcome messages
-│   ├── HelpCommandHandler.java     - Multi-language help
-│   ├── LanguageCommandHandler.java - Language selection with buttons
-│   ├── BeachNameHandler.java       - Main beach information orchestrator
-│   └── UnknownCommandHandler.java  - Fallback handler
-├── model/
-│   ├── BeachLocation.java          - Beach data model
-│   ├── WeatherInfo.java           - Weather data model
-│   ├── JellyfishInfo.java         - Marine safety model
-│   └── NominatimResponse.java     - OSM API response model
-├── config/
-│   ├── BotConfig.java             - Spring Boot bot registration
-│   └── ApiConfigurationProperties.java - External API settings
-├── util/
-│   ├── BotConst.java              - Multi-language constants
-│   └── TypoCorrection.java        - Smart typo correction
-└── BotApplication.java            - Spring Boot main class
+**Или соберите JAR и запустите:**
+```bash
+./gradlew build
+java -jar build/libs/bot-0.0.1-SNAPSHOT.jar
 ```
 
-### **⚡ Performance Features**
+### **5. Тестирование**
+1. Найдите вашего бота в Telegram по username
+2. Отправьте `/start`
+3. Выберите язык через `/language`
+4. Введите название пляжа: `Benidorm`, `Valencia`, `Marbella`
+
+---
+
+## 💻 Техническая архитектура
+
+### **🏭️ Структура проекта**
+
 ```
-Async Processing:    CompletableFuture parallel execution
-Caching:            5-minute location-based cache  
-Smart Timeouts:     5-10 second adaptive timeouts
-Multi-API Fallback: Graceful degradation if APIs fail
-Response Time:      3-8 seconds (80% improvement)
+bot/
+├── src/main/
+│   ├── java/de/telekom/bot/
+│   │   ├── handler/              # Обработчики команд
+│   │   │   ├── CommandHandler.java           # Базовый интерфейс
+│   │   │   ├── StartCommandHandler.java      # /start команда
+│   │   │   ├── HelpCommandHandler.java       # /help команда
+│   │   │   ├── LanguageCommandHandler.java   # /language команда
+│   │   │   ├── LangCommandHandler.java       # /lang алиас
+│   │   │   ├── BeachNameHandler.java         # Поиск пляжей
+│   │   │   └── UnknownCommandHandler.java    # Неизвестные команды
+│   │   │
+│   │   ├── service/              # Бизнес-логика
+│   │   │   ├── WeatherBot.java               # Главный бот
+│   │   │   ├── UserLanguageService.java      # Управление языками
+│   │   │   ├── CommandDispatcher.java        # Маршрутизация команд
+│   │   │   ├── GeocodeService.java           # Поиск локаций (Nominatim)
+│   │   │   ├── WeatherService.java           # Погодные данные (Open-Meteo)
+│   │   │   ├── JellyfishService.java         # Данные о медузах
+│   │   │   └── BeachCharacteristicsService.java # Характеристики пляжа
+│   │   │
+│   │   ├── model/                # Модели данных
+│   │   │   ├── BeachLocation.java
+│   │   │   ├── WeatherInfo.java
+│   │   │   ├── JellyfishInfo.java
+│   │   │   ├── NominatimResponse.java
+│   │   │   └── NominatimConfig.java
+│   │   │
+│   │   ├── config/               # Конфигурация
+│   │   │   ├── BotConfig.java                # Регистрация бота
+│   │   │   ├── ApiConfigurationProperties.java # API настройки
+│   │   │   └── AppFeaturesConfig.java        # Фичи приложения
+│   │   │
+│   │   ├── util/                 # Утилиты
+│   │   │   ├── BotConst.java                 # Константы и переводы
+│   │   │   ├── TypoCorrection.java           # Коррекция опечаток
+│   │   │   └── ConfigurationLogger.java      # Логирование конфига
+│   │   │
+│   │   └── BotApplication.java    # Точка входа Spring Boot
+│   │
+│   └── resources/
+│       ├── application.yml.example  # Пример конфигурации
+│       └── application.yml         # Реальная конфигурация (в .gitignore)
+│
+├── build.gradle            # Gradle конфигурация
+├── settings.gradle
+├── .gitignore
+└── README.md
 ```
 
-### **🔌 External Integrations**
-```
-Location:     Nominatim OpenStreetMap API
-Weather:      Open-Meteo API + regional estimation
-Marine Data:  iNaturalist + GBIF + OBIS APIs  
-Beach Info:   OpenStreetMap + curated database
-```
+### **🔧 Технологии**
+
+| Компонент | Технология | Версия |
+|-----------|------------|-------|
+| **Язык** | Java | 21 |
+| **Фреймворк** | Spring Boot | 3.5.5 |
+| **Сборка** | Gradle | 8.x |
+| **Telegram API** | TelegramBots | 6.9.7.1 |
+| **Упрощение кода** | Lombok | latest |
+| **Логирование** | Logback | Spring Boot default |
+
+### **⚡ Оптимизации**
+
+- **🚀 Асинхронная обработка:** CompletableFuture для параллельных запросов к API
+- **💾 Кэширование:** 5-минутный кэш по локации
+- **⏱️ Таймауты:** Адаптивные 5-10 секунд
+- **🛡️ Fallback:** Плавная деградация при сбоях
+- **📊 Время ответа:** 3-8 секунд в среднем
+
+### **🔌 Внешние API**
+
+| Сервис | API | Назначение |
+|---------|-----|------------|
+| **Локация** | Nominatim OSM | GPS-координаты, адреса |
+| **Погода** | Open-Meteo | Температура воздуха/воды |
+| **Медузы** | iNaturalist + GBIF + OBIS | Биологические данные |
+| **Пляжи** | OSM + база данных | Тип покрытия, характеристики |
 
 ---
 
-## 📱 Commands Reference
+## 📱 Команды
 
-### **🌍 Language Commands**
-- `/language` - Show language selection menu with flags
-- `/lang` - Quick alias for language selection
+### **Основные команды**
 
-### **ℹ️ Information Commands**  
-- `/start` - Welcome message (localized)
-- `/help` - Show help and examples (localized)
+| Команда | Описание |
+|---------|------------|
+| `/start` | Приветственное сообщение (локализованное) |
+| `/help` | Помощь и примеры использования |
+| `/language` или `/lang` | Выбор языка интерфейса |
 
-### **🏖️ Beach Search**
-Just type any beach name:
-- `Benidorm` - Popular Costa Blanca resort
-- `Playa de la Concha` - Famous San Sebastián beach  
-- `Costa Brava` - Catalonian coastal region
-- `Marbella` - Glamorous Costa del Sol destination
+### **🏖️ Поиск пляжей**
+Просто введите название пляжа или города:
 
----
-
-## 🎨 User Experience Features
-
-### **📱 Interactive Elements**
-- **Language selection** with country flag buttons
-- **Progress notifications** during beach search
-- **Emoji-enhanced** information displays
-- **Smart typo correction** with suggestions
-
-### **🔄 Intelligent Behavior**
-- **Persistent language** preferences across sessions
-- **Contextual help** based on user's language
-- **Graceful error handling** with helpful suggestions
-- **Cache optimization** for frequently requested beaches
-
-### **🌈 Visual Quality**
-- **Professional emoji** usage throughout
-- **Clean, structured** information layout
-- **Consistent formatting** across languages
-- **Beautiful progress** indicators
+**Примеры:**
+- `Benidorm` - популярный курорт Коста-Бланка
+- `Playa de la Concha` - знаменитый пляж в Сан-Себастьяне
+- `Marbella` - гламурный Коста-дель-Соль
+- `Valencia` - пляжи Валенсии
+- `Costa Brava` - каталонское побережье
 
 ---
 
-## 🏆 Production Ready Features
+## ✨ Преимущества
 
-### **✅ Quality Assurance**
-- Comprehensive error handling
-- Multi-API redundancy  
-- Performance optimization
-- User experience testing
-- Extensive logging
+### **🎯 Удобство использования**
+- 🌍 Интерактивный выбор языка с кнопками-флагами
+- ⏱️ Уведомления о прогрессе поиска
+- 🌈 Яркое оформление с emoji
+- ✍️ Интеллектуальная коррекция опечаток
+- 💾 Сохранение настроек языка
 
-### **📈 Scalability**
-- Efficient resource usage
-- Smart caching strategies
-- Parallel processing
-- Graceful degradation
-- Modular architecture
+### **🔧 Надёжность**
+- 🛡️ Комплексная обработка ошибок
+- 🔄 Резервные API (мульти-API fallback)
+- 📊 Расширенное логирование
+- ⏰ Автоматическое восстановление после таймаутов
+- 💾 Кэш-fallback при сетевых проблемах
 
-### **🔒 Reliability**
-- Multiple data source fallbacks
-- Timeout recovery mechanisms  
-- Cache fallback for network issues
-- Smart defaults when data unavailable
-- Production-grade error handling
-
-### **🌍 Internationalization**
-- Complete localization infrastructure
-- Easy to add new languages
-- Cultural adaptation ready
-- Professional translation quality
-- Consistent user experience
+### **🚀 Производительность**
+- ⚡ Эффективное использование ресурсов
+- 💾 Умное кэширование
+- 🚀 Параллельная обработка запросов
+- 🏭 Модульная архитектура
+- 📈 Быстрый ответ (3-8 сек)
 
 ---
 
-## 🚀 Future Development Ideas
+## 💡 Идеи для развития
 
-### **🌐 Extended Localization**
-- French, German, Italian language support
-- Cultural adaptations (date formats, units)
-- Automatic language detection from Telegram
+### **🌍 Дополнительные языки**
+- 🇫🇷 Французский, 🇩🇪 Немецкий, 🇮🇹 Итальянский
+- 🧠 Автоматическое определение языка из Telegram
+- 🌎 Культурная адаптация (форматы дат, единицы измерения)
 
-### **📊 Advanced Features**  
-- Hourly weather forecasts
-- Beach crowding predictions
-- UV index and sun protection advice
-- Tide information and surf conditions
+### **📈 Расширенные функции**
+- ⛅ Почасовой прогноз погоды
+- 🏖️ Прогноз загруженности пляжей
+- ☀️ UV-индекс и советы по защите от солнца
+- 🌊 Информация о приливах и волнах
 
-### **🏨 Tourism Integration**
-- Nearby hotels and accommodations
-- Restaurant recommendations  
-- Activity suggestions
-- Transportation options
+### **🏨 Туристические сервисы**
+- 🏨 Ближайшие отели и жильё
+- 🍴 Рекомендации ресторанов
+- 🏝️ Развлечения и активности
+- 🚌 Варианты транспорта
 
-### **📱 Enhanced UX**
-- Interactive maps
-- Photo galleries
-- User reviews and ratings
-- Personalized recommendations
-
----
-
-## 🏖️ Perfect for Spanish Tourism
-
-The Spanish Beach Bot is **production-ready** and ideal for:
-
-- **🇪🇸 International tourists** visiting Spain
-- **🏖️ Beach safety** and planning applications  
-- **🌍 Multilingual user bases** requiring localized content
-- **📱 Tourism businesses** needing beach intelligence
-- **⚡ High-performance** real-time information systems
-
-**Ready to serve thousands of beach-goers with reliable, fast, and localized beach intelligence!** 🚀✨
+### **📱 Улучшения UX**
+- 🗺️ Интерактивные карты
+- 📸 Фотогалереи пляжей
+- ⭐ Отзывы и рейтинги пользователей
+- 🎯 Персонализированные рекомендации
 
 ---
 
-## 📞 Support
+## 🎖️ Кейсы использования
 
-For technical support or feature requests:
-- Check the code documentation in `/src` 
-- Review configuration in `application.properties`
-- Monitor logs in `/logs` directory
-- Use `/help` command for user assistance
+Bot идеально подходит для:
 
-**¡Disfruta de las playas españolas de forma segura! 🏖️🌊**
+- 🌍 **Международных туристов** - посещающих Испанию
+- 🏖️ **Планирования пляжного отдыха** - безопасность и комфорт
+- 🏪 **Туристических компаний** - информирование клиентов
+- 📱 **Мобильных приложений** - интеграция бота в сервис
+- ⚡ **Real-time систем** - быстрый доступ к данным
+
+---
+
+## 📞 Поддержка и контакты
+
+- 📚 Документация: смотрите комментарии в коде `/src`
+- ⚙️ Конфигурация: `src/main/resources/application.yml`
+- 📄 Логи: директория `/logs`
+- ❓ Помощь: используйте `/help` в боте
+
+---
+
+**🌊 ¡Disfruta de las playas españolas de forma segura! 🏖️**
