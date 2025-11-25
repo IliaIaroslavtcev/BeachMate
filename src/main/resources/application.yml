@@ -1,0 +1,145 @@
+# Spanish Beach Bot Configuration
+spring:
+  application:
+    name: bot
+    admin:
+      enabled: false
+  jmx:
+    enabled: false
+  # Disable Spring Boot admin features
+  boot:
+    admin:
+      client:
+        enabled: false
+
+# Server Configuration
+server:
+  port: 8080
+
+# Management Configuration (completely disable JMX to avoid RMI warnings)
+management:
+  endpoints:
+    # Disable all JMX endpoints
+    jmx:
+      exposure:
+        exclude: "*"
+    # Only enable web endpoints if needed
+    web:
+      exposure:
+        include: "health,info"
+  # Completely disable JMX
+  jmx:
+    enabled: false
+  metrics:
+    export:
+      jmx:
+        enabled: false
+  server:
+    port: -1  # Disable management server
+
+# Telegram Bot Configuration
+telegram:
+  bot:
+    token: "8321962699:AAHPZ57mPrFENXHtvuajSRxeIZ0QM0HKJsY"
+    username: "BeachMateBot"
+
+# ================================
+# EXTERNAL API CONFIGURATIONS
+# ================================
+
+# Nominatim OpenStreetMap API Configuration
+nominatim:
+  api:
+    base-url: "https://nominatim.openstreetmap.org"
+    search-endpoint: "/search"
+    user-agent: "SpanishBeachBot/1.0 (+https://github.com/yourusername/beach-bot)"
+    timeout-seconds: 30
+    connect-timeout-seconds: 10
+    limit: 3
+    rate-limit-ms: 1000  # Minimum 1 second between requests per Nominatim policy
+    country-codes: "es"  # Restrict search to Spain (ISO 3166-1alpha2 codes, comma-separated)
+    enabled: true
+
+# OpenWeatherMap API Configuration (Future Integration)
+weather:
+  api:
+    base-url: "https://api.openweathermap.org/data/2.5"
+    current-endpoint: "/weather"
+    forecast-endpoint: "/forecast"
+    onecall-endpoint: "/onecall"
+    key: "YOUR_OPENWEATHER_API_KEY_HERE"
+    timeout-seconds: 15
+    enabled: false
+
+# Marine/Ocean API Configuration (Open-Meteo)
+marine:
+  api:
+    base-url: "https://marine-api.open-meteo.com/v1"
+    endpoint: "/marine"
+    timeout-seconds: 20
+    enabled: false
+
+# Jellyfish Monitoring API Configuration (Future Integration)
+jellyfish:
+  api:
+    base-url: "https://api.jellyfish-alerts.example.com/v1"
+    endpoint: "/warnings"
+    key: "YOUR_JELLYFISH_API_KEY_HERE"
+    timeout-seconds: 15
+    enabled: false
+
+# Beach Information API Configuration (Future Integration)
+beach:
+  api:
+    base-url: "https://api.beach-info.example.com/v1"
+    endpoint: "/beaches"
+    key: "YOUR_BEACH_API_KEY_HERE"
+    timeout-seconds: 20
+    enabled: false
+
+# ================================
+# APPLICATION CONFIGURATIONS
+# ================================
+
+# Application Features
+app:
+  features:
+    geocoding:
+      enabled: true
+    weather:
+      enabled: true  # Enable weather for temperature display
+    marine:
+      enabled: false
+    jellyfish:
+      enabled: false
+
+# Logging Configuration
+logging:
+  file:
+    name: "logs/spanish-beach-bot.log"
+  logback:
+    rollingpolicy:
+      max-file-size: "10MB"
+      max-history: 30
+      total-size-cap: "100MB"
+  pattern:
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} %5level [%thread] %-40.40logger{39} : %msg%n"
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} %5level [%thread] %-40.40logger{39} : %msg%n"
+  level:
+    de.telekom.bot: INFO
+    de.telekom.bot.service.GeocodeService: DEBUG
+    org.telegram.telegrambots: WARN
+    root: INFO
+    # Suppress RMI/JMX related warnings
+    sun.rmi.transport.tcp: ERROR
+    sun.management: ERROR
+    com.sun.jmx: ERROR
+    sun.rmi: ERROR
+    javax.management: ERROR
+    java.util.logging.LogManager: ERROR
+
+# System properties override
+java:
+  util:
+    logging:
+      manager: org.apache.logging.log4j.jul.LogManager

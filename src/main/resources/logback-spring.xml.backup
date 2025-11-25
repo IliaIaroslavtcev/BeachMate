@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- Include default Spring Boot logback configuration -->
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+
+    <!-- Console Appender with custom pattern -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %5level [%thread] %-40.40logger{39} : %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- File Appender for application logs -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/spanish-beach-bot.log</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %5level [%thread] %-40.40logger{39} : %msg%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>logs/spanish-beach-bot.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
+            <maxFileSize>10MB</maxFileSize>
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>100MB</totalSizeCap>
+        </rollingPolicy>
+    </appender>
+
+    <!-- Suppress RMI/JMX related warnings -->
+    <logger name="sun.rmi.transport.tcp" level="ERROR" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+    <logger name="sun.management" level="ERROR" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+    <logger name="com.sun.jmx" level="ERROR" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+
+    <!-- Application specific loggers -->
+    <logger name="de.telekom.bot" level="INFO" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+    
+    <!-- GeocodeService debug logging -->
+    <logger name="de.telekom.bot.service.GeocodeService" level="DEBUG" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+
+    <!-- Telegram bots logging -->
+    <logger name="org.telegram.telegrambots" level="WARN" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+
+    <!-- Root logger -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+    <!-- Profile-specific configurations -->
+    <springProfile name="prod">
+        <root level="WARN">
+            <appender-ref ref="FILE"/>
+        </root>
+    </springProfile>
+    
+    <springProfile name="dev">
+        <logger name="de.telekom.bot" level="DEBUG"/>
+    </springProfile>
+</configuration>

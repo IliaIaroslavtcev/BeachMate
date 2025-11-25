@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    
+    <!-- Console Appender -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %5level [%thread] %-40.40logger{39} : %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- File Appender with simple daily rolling -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/spanish-beach-bot.log</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %5level [%thread] %-40.40logger{39} : %msg%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>logs/spanish-beach-bot.%d{yyyy-MM-dd}.log.gz</fileNamePattern>
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>100MB</totalSizeCap>
+        </rollingPolicy>
+    </appender>
+
+    <!-- Suppress ALL RMI/JMX related logs completely -->
+    <logger name="sun.rmi" level="OFF" additivity="false"/>
+    <logger name="sun.rmi.transport" level="OFF" additivity="false"/>
+    <logger name="sun.rmi.transport.tcp" level="OFF" additivity="false"/>
+    <logger name="sun.rmi.server" level="OFF" additivity="false"/>
+    <logger name="sun.rmi.runtime" level="OFF" additivity="false"/>
+    <logger name="sun.management" level="OFF" additivity="false"/>
+    <logger name="jdk.management" level="OFF" additivity="false"/>
+    <logger name="jdk.management.agent" level="OFF" additivity="false"/>
+    <logger name="com.sun.jmx" level="OFF" additivity="false"/>
+    <logger name="javax.management" level="OFF" additivity="false"/>
+    <logger name="java.util.logging.LogManager" level="OFF" additivity="false"/>
+    <logger name="org.springframework.jmx" level="OFF" additivity="false"/>
+    <logger name="org.springframework.boot.actuate.jmx" level="OFF" additivity="false"/>
+
+    <!-- Application specific loggers -->
+    <logger name="de.telekom.bot" level="INFO" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+    
+    <!-- GeocodeService debug logging -->
+    <logger name="de.telekom.bot.service.GeocodeService" level="DEBUG" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+
+    <!-- Telegram bots logging -->
+    <logger name="org.telegram.telegrambots" level="WARN" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+
+    <!-- Root logger -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+</configuration>
