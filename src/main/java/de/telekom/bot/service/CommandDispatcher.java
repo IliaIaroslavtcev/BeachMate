@@ -4,6 +4,7 @@ import de.telekom.bot.handler.CommandHandler;
 import de.telekom.bot.handler.UnknownCommandHandler;
 import de.telekom.bot.handler.BeachNameHandler;
 import de.telekom.bot.handler.LanguageCommandHandler;
+import de.telekom.bot.util.BotConst;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,6 +38,13 @@ public class CommandDispatcher {
                 logger.info("Registered command handler: {}", command);
             }
         }
+        
+        // Register /lang as an alias for /language command
+        if (commandHandlers.containsKey(BotConst.COMMAND_LANGUAGE)) {
+            commandHandlers.put(BotConst.COMMAND_LANG, languageCommandHandler);
+            logger.info("Registered command alias: {} -> {}", BotConst.COMMAND_LANG, BotConst.COMMAND_LANGUAGE);
+        }
+        
         logger.info("Command dispatcher initialized with {} handlers", commandHandlers.size());
     }
 

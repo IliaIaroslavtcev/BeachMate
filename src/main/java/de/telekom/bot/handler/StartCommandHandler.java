@@ -81,7 +81,24 @@ public class StartCommandHandler implements CommandHandler {
                        "💡 *Consejo:* Escribe /help para ver ejemplos de nombres de playas!";
                        
             default:
-                return BotConst.WELCOME_MESSAGE + "\n\n🌍 *Change language:* /language";
+                // Default to English if language is not recognized
+                return "🌊 *Welcome to Spanish Beach Bot!* 🏖️\n\n" +
+                       "🏖️ *How to use the bot:*\n\n" +
+                       "📝 **Step 1:** Simply type the name of any Spanish beach you're interested in\n" +
+                       "🔍 **Step 2:** Get comprehensive information including:\n" +
+                       "   • 🌡️ Current air & water temperature\n" +
+                       "   • 🗺️ Exact coordinates & location on map\n" +
+                       "   • 🌤️ Weather conditions & comfort level\n" +
+                       "   • 🪼 Jellyfish safety alerts\n" +
+                       "   • 🏖️ Beach surface information\n\n" +
+                       "💬 *Example:* Just type \"Benidorm\" or \"Playa de la Concha\"\n\n" +
+                       "📍 *Coverage areas:*\n" +
+                       "   • Mediterranean coast (Costa Brava, Costa del Sol, Costa Blanca)\n" +
+                       "   • Atlantic coast (Basque beaches, Galicia)\n" +
+                       "   • Balearic Islands (Mallorca, Ibiza, Menorca)\n" +
+                       "   • Canary Islands (Tenerife, Gran Canaria, Lanzarote)\n\n" +
+                       "🌍 *Change language:* /language\n" +
+                       "💡 *Tip:* Type /help to see example beach names!";
         }
     }
 }

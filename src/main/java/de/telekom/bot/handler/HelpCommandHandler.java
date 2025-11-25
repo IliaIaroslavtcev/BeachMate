@@ -85,7 +85,26 @@ public class HelpCommandHandler implements CommandHandler {
                        "💬 *Ejemplo:* ¡Escribe \"Benidorm\" para obtener información completa!";
                        
             default:
-                return BotConst.HELP_MESSAGE;
+                // Default to English if language is not recognized
+                return "🌊 *Spanish Beach Bot Help* 🏖️\n\n" +
+                       "📝 **How to get beach information:**\n" +
+                       "Just type the name of any Spanish beach!\n\n" +
+                       "🔹 **Commands:**\n" +
+                       "`/start` - Welcome message and instructions\n" +
+                       "`/help` - Show this help message\n" +
+                       "`/language` or `/lang` - Change bot language 🌍\n\n" +
+                       "🏖️ **Popular beach examples to try:**\n\n" +
+                       "**🌅 Costa Brava:**\n" +
+                       "• Tossa de Mar • Lloret de Mar • Cadaqués\n\n" +
+                       "**☀️ Costa del Sol:**\n" +
+                       "• Marbella • Torremolinos • Nerja • Fuengirola\n\n" +
+                       "**🏖️ Costa Blanca:**\n" +
+                       "• Benidorm • Alicante • Calpe • Dénia\n\n" +
+                       "**🏝️ Balearic Islands:**\n" +
+                       "• Cala Comte • Es Trenc • Cala Turqueta • Playa de Palma\n\n" +
+                       "**🌋 Basque Coast:**\n" +
+                       "• La Concha • Zurriola • Sopelana\n\n" +
+                       "💬 *Example:* Type \"Benidorm\" to get full information!";
         }
     }
 }
