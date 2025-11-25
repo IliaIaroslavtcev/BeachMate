@@ -149,24 +149,32 @@ Over 20+ beaches including:
 4. Get your bot token
 
 ### **2. Configure Application**
-Edit `src/main/resources/application.properties`:
-```properties
-# Telegram Bot Configuration
-telegram.bot.token=YOUR_BOT_TOKEN_HERE
-telegram.bot.username=your_bot_username
 
-# API Settings (pre-configured)
-nominatim.api.enabled=true
-weather.api.enabled=true
-marine.api.enabled=true
-jellyfish.api.enabled=true
+**IMPORTANT:** Never commit real tokens/API keys to Git!
 
-# Feature Toggles
-app.features.geocoding.enabled=true
-app.features.weather.enabled=true
-app.features.marine.enabled=true
-app.features.jellyfish.enabled=true
+1. Copy the example configuration:
+```bash
+cp src/main/resources/application.yml.example src/main/resources/application.yml
 ```
+
+2. Edit `src/main/resources/application.yml` with your real credentials:
+```yaml
+# Telegram Bot Configuration
+telegram:
+  bot:
+    token: "YOUR_REAL_BOT_TOKEN_FROM_BOTFATHER"  # Get from @BotFather
+    username: "YourBotUsername"
+
+# Nominatim (already configured, no API key needed)
+nominatim:
+  api:
+    user-agent: "SpanishBeachBot/1.0 (+https://github.com/IliaIaroslavtcev/BeachMate)"
+    enabled: true
+
+# All other APIs are pre-configured and enabled
+```
+
+**Note:** The `application.yml` file is in `.gitignore` to protect your secrets!
 
 ### **3. Run Application**
 ```bash
